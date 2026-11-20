@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Eknow 穿着手记",
+    "slug": "eknow-wardrobe",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/eknow.png",
+    "scheme": "eknow",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.eknow.wardrobe"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/eknow.png",
+        "backgroundColor": "#373669"
+      },
+      "package": "app.eknow.wardrobe",
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-image-picker", {"photosPermission":"选择要导入的衣物、量体照片或试穿视频。","cameraPermission":"拍摄衣物或试穿记录。","microphonePermission":false}],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/eknow.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

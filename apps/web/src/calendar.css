@@ -1,0 +1,64 @@
+@media (max-width: 700px) {
+  .calendar .month {
+    margin-bottom: 8px;
+  }
+  .days button[data-week="false"] {
+    display: none;
+  }
+  .calendar .days {
+    row-gap: 4px;
+  }
+  .calendar .days button {
+    grid-row: 2;
+  }
+  .calendar .days button:nth-child(7n + 1) {
+    grid-column: 1;
+  }
+  .calendar .days button:nth-child(7n + 2) {
+    grid-column: 2;
+  }
+  .calendar .days button:nth-child(7n + 3) {
+    grid-column: 3;
+  }
+  .calendar .days button:nth-child(7n + 4) {
+    grid-column: 4;
+  }
+  .calendar .days button:nth-child(7n + 5) {
+    grid-column: 5;
+  }
+  .calendar .days button:nth-child(7n + 6) {
+    grid-column: 6;
+  }
+  .calendar .days button:nth-child(7n) {
+    grid-column: 7;
+  }
+  .calendar .days > span {
+    display: none;
+  }
+  .calendar details[open] ~ .days button {
+    display: grid;
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .calendar details[open] ~ .days > span {
+    display: block;
+  }
+}
+.week-toggle {
+  display: none;
+}
+@media (max-width: 700px) {
+  .week-toggle {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .week-toggle summary {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 0;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
